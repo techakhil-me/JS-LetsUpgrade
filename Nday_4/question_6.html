@@ -1,0 +1,26 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        while (true) {
+            const input = prompt("enter a number greater than 100 with conditional statements");
+            if (Number(input) > 100 || input.toString() === '') {
+                break;
+            }
+        }
+        while (true) {
+            const input = prompt("enter a number greater than 100 with ternary");
+            let decider = Number(input) > 100 || input.toString() === '' ? 1 : 0;
+            if (decider) {
+                break;
+            }
+
+        }
+    </script>
+</body>
+
+</html>

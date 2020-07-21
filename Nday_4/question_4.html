@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <script>
+        var oper;
+
+        function func(o) {
+            oper = o;
+        }
+
+
+
+
+        function percent(a, b) {
+            return a * 100 / b
+        }
+
+        function answer() {
+            var first = document.getElementById("first").value;
+            var second = document.getElementById("second").value;
+            if (oper == '%') {
+                var ans = percent(first, second);
+            } else {
+                var ans = eval(first.concat(oper, second));
+            }
+
+            document.write(`Answer: ${ans}`);
+        }
+    </script>
+</head>
+
+<body>
+
+    <label>First Number:</label>
+    <input type="text" id="first" name="first"><br><br>
+    <label>Operation:</label>
+    <button type="button" onclick="func('+')">+</button>
+    <button type="button" onclick="func('-')">-</button>
+    <button type="button" onclick="func('*')">*</button>
+    <button type="button" onclick="func('/')">/</button>
+    <button type="button" onclick="func('%')">%</button><br><br>
+    <label>Second Number:</label>
+    <input type="text" id="second" name="second"><br><br>
+    <input type="button" onclick="answer()" value="answer">
+</body>
+
+</html>

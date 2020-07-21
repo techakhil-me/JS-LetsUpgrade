@@ -1,0 +1,98 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <script>
+        {
+            console.log('STRINGS:-');
+            let str = 'Hello World!!';
+            // same as indexing with []
+            console.log(str.charAt(8), str[8]);
+
+            // adds the two string together
+            console.log(str.concat(' hey'));
+
+            // returns if the specified string is present inside the other
+            console.log(str.includes('Hell'), str.includes('hi'));
+
+            // returns the first index of the specified substr
+            console.log(str.indexOf('l'));
+
+            // returns the first index of the specified substr
+            console.log(str.lastIndexOf('l'));
+
+            // give the length of the whole string
+            console.log(str.length);
+
+            // returns true if the string ends with the specified string
+            console.log(str.endsWith("!!"), str.endsWith('hmm'));
+
+            // returns true if the string starts with the specified string
+            console.log(str.startsWith('He'), str.startsWith('testing'));
+
+            // Returns a String value that is made from count copies appended together.
+            console.log(str.repeat(10));
+
+            // Replaces text in a string, using a search string.
+            console.log(str.replace('World', 'Universe'));
+
+            // Returns a section of a string.
+            console.log(str.slice(4, 11));
+
+            // Gets a substring beginning at the specified location and having the specified length.
+            console.log(str.substr(4));
+
+            // Converts all the alphabetic characters in a string to lowercase.
+            console.log(str.toLowerCase());
+
+            // Converts all the alphabetic characters in a string to uppercase.
+            console.log(str.toUpperCase());
+
+            // Removes the leading and trailing white space and line terminator characters from a string.
+            console.log(' '.repeat(100).concat(str).trim());
+        }
+
+        {
+            console.log('ARRAY:-');
+            let arr = [1, 2, 3, 'hey', 'bye', true]
+
+            // Reverses the elements in an Array.
+            arr.reverse()
+            console.log(arr);
+
+            // Combines two or more arrays.
+            console.log(arr.concat([23, 1, 23132, 123, 2], [23, 323]));
+
+            // Returns the index of the first occurrence of a value in an array.
+            console.log(arr.indexOf(3));
+
+            // Adds all the elements of an array separated by the specified separator string.
+            console.log(arr.join(' '));
+
+            // Returns the index of the last occurrence of a specified value in an array.
+            console.log(arr.lastIndexOf(3));
+
+            // removes the last element
+            arr.pop()
+            console.log(arr);
+
+            // appeends the val to the end
+            arr.push(123)
+            console.log(arr);
+
+            // appeends the val to the start
+            arr.unshift(23)
+            console.log(arr);
+
+            //removes the first val
+            arr.shift()
+            console.log(arr);
+        }
+    </script>
+</body>
+
+</html>

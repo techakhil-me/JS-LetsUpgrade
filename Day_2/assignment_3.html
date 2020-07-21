@@ -1,0 +1,22 @@
+<html>
+
+<head>
+    <script>
+        function getPrint() {
+            var myDate = new Date();
+            var myDay = myDate.getDay();
+            var myYear = myDate.getFullYear();
+            var myMonth = myDate.getMonth();
+            myDate = myDate < 10 ? '0'+myDate : myDate;
+            myMonth = myMonth < 10 ? '0'+myMonth : myMonth;
+            document.write(myDay+'/'+myMonth+'/'+myYear);
+        }
+    </script>
+</head>
+
+<body>
+    <h1>HELLO THIS IS A WEBPAGE</h1>
+    <button onclick="getPrint()">click to print Date</button>
+</body>
+
+</html>

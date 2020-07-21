@@ -1,0 +1,42 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        let marks = prompt("enter a number");
+        // ternary
+        let tmarks = marks > 90 ? 'A' : marks > 75 ? 'B' : marks > 50 ? 'C' : 'D';
+        console.log(`Grade using ternary ${tmarks}`);
+        let efmarks;
+        if (marks > 90) {
+            efmarks = 'A';
+        } else if (marks > 75) {
+            efmarks = 'B';
+        } else if (marks > 50) {
+            efmarks = 'C';
+        } else {
+            efmarks = 'D';
+        }
+        console.log(`Grade using conditional ${efmarks}`);
+        let smarks
+        switch (true) {
+            case (marks >= 90):
+                smarks = 'A';
+                break;
+            case (marks > 75):
+                smarks = 'B';
+                break;
+            case (marks > 50):
+                smarks = 'C';
+                break;
+            default:
+                smarks = 'D';
+        }
+        console.log(`Grade using switch ${smarks}`)
+    </script>
+</body>
+
+</html>

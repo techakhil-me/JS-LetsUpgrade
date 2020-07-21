@@ -1,0 +1,30 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        document.title = 'LetsUpgrade Day-4 | Question-2'
+
+        const student = {
+            name: "Helsinki",
+            age: 24,
+            projects: {
+                diceGame: "Two player dice game using JavaScript"
+            }
+        }
+        let {
+            name,
+            age,
+            projects,
+            projects: {
+                diceGame
+            }
+        } = student;
+        console.log(name, age, projects, diceGame);
+    </script>
+</body>
+
+</html>

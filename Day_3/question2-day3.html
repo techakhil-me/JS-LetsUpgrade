@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <title>Question 3</title>
+    <style>
+        pre code {
+            background-color: #eee;
+            border: 1px solid #999;
+            display: block;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Difference between var, let and const</p>
+    <ol><b>var</b>
+        <li>The var variables belong to the global scope or local scope if they are declared inside a function:</li>
+        <li>The global var variables are added to the global object as properties. The global object is window on the web browser and global on Node.js:</li>
+        <li>However, the let variables are not added to the global object:</li>
+        <li>
+            <pre><code>
+function nodeSimplified(){
+    var a =10;
+    console.log(a);  // output 10
+    if(true){
+        var a=20;
+        console.log(a); // output 20
+    }
+    console.log(a);  // output 20
+}</code></pre>
+        </li>
+    </ol>
+    <ol><b>let</b>
+        <li>The let variables are blocked scopes:</li>
+        <li>However, the let variables are not added to the global object:</li>
+        <li>If you redeclare a variable with the let keyword, you will get an error:</li>
+        <li>
+            <pre><code>
+function nodeSimplified(){
+    let a =10;
+    console.log(a);  // output 10
+    if(true){
+        let a=20;
+        console.log(a); // output 20
+    }
+    console.log(a);  // output 10
+}
+</code></pre>
+        </li>
+    </ol>
+    <ol><b>const</b>
+        <li>The const statements are blocked scopes:</li>
+        <li>Similarly, the const statements are not added to the global object:</li>
+        <li>Const statement values can be assigned once and they cannot be reassigned:</li>
+        <li>
+            <pre><code>
+function nodeSimplified(){
+    const MY_VARIABLE =10;
+    console.log(MY_VARIABLE);  //output 10 
+    }
+</code></pre>
+        </li>
+    </ol>
+</body>
+
+</html>
