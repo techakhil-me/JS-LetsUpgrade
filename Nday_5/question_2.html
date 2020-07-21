@@ -1,0 +1,67 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        class User {
+            constructor(name, age, email) {
+                [this.name, this.age, this.email] = [name, age, email];
+                this.course = ['math', 'science', 'cs'];
+            }
+
+            login() {
+                console.log(`${this.name} has logged in !`);
+            }
+
+            logout() {
+                console.log(`${this.name} has logged out !`);
+            }
+        }
+        user1 = new User('Pranav', 17, 'xyz@abc.pq');
+        console.log(user1.name, user1.age, user1.email);
+
+        class Moderator extends User {
+            constructor(name, age, email, coins = 0) {
+                super(name, age, email);
+                this.coins = coins;
+            }
+
+            AddCoin(num) {
+                this.coins += num;
+            }
+
+            RemoveCoin(num) {
+                this.coins -= num;
+            }
+        }
+
+        moderator1 = new Moderator('somexyz', '34', 'some@xyz.abc', 200);
+        console.log(moderator1.name, moderator1.age, moderator1.email, moderator1.coins);
+        moderator1.AddCoin(1023);
+        console.log(moderator1.coins);
+        moderator1.RemoveCoin(231);
+        console.log(moderator1.coins);
+
+        class Admin extends Moderator {
+            AddCourse(course_name, user) {
+                user.course.push(course_name);
+            }
+
+            RemoveCousre(course_name, user) {
+                user.course.splice(user.course.indexOf(course_name), 1)
+            }
+        }
+        console.log(user1.course);
+        admin1 = new Admin('admin123', '23', 'admin123@abc.xyz', 1203);
+        admin1.AddCourse('english', user1)
+        console.log(user1.course);
+        admin1.RemoveCousre('math', user1)
+        console.log(user1.course);
+    </script>
+    </script>
+</body>
+
+</html>

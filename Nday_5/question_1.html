@@ -1,0 +1,30 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        document.title = 'LetsUpgrade Day-5 | Question-1';
+        let num;
+        do
+        {
+            num = Number(prompt('Enter a Positive Number: '));
+        }
+        while (num<0)
+
+        li = [];
+        for (let z=1; z<=num; z++)
+        {
+            li.push(z);
+        }
+        // console.log(...li);
+        li = li.filter((el)=>el%2)
+        // console.log(...li);
+        console.log(...li.map(el=>el**2));
+
+    </script>
+</body>
+
+</html>
